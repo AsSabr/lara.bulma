@@ -4,8 +4,8 @@
 let wow = new WOW({
   boxClass: 'wow', // animated element css class (default is wow)
   animateClass: 'animate__animated', // animation css class (default is animated)
-  //offset: 0, // distance to the element when triggering the animation (default is 0)
-  //mobile: true, // trigger animations on mobile devices (default is true)
+  offset: 90, // distance to the element when triggering the animation (default is 0)
+  mobile: false, // trigger animations on mobile devices (default is true)
   //live: true, // act on asynchronously loaded content (default is true)
   /*callback: function (box) {
     // the callback is fired every time an animation is started
@@ -39,3 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+// Navbar Scroll
+window.onscroll = () => {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("navbar").classList.add("navbar__scroll");
+  } else {
+    document.getElementById("navbar").classList.remove("navbar__scroll");
+  }
+};
