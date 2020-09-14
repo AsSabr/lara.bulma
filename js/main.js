@@ -48,3 +48,11 @@ window.onscroll = () => {
     document.getElementById("navbar").classList.remove("navbar__scroll");
   }
 };
+
+
+var elem = document.querySelector('.columns__grid');
+var iso = new Masonry(elem, {
+  itemSelector: ".column__item",
+  percentPosition: true,
+  horizontalOrder: true
+});
